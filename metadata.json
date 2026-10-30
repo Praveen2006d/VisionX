@@ -1,0 +1,6 @@
+{
+  "name": "VISIONX – AI Video Intelligence System",
+  "description": "Understand. Search. Interact with Video. AI-powered video intelligence platform converting video footage into searchable, understandable, and interactive events with timeline navigation and conversational assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

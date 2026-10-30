@@ -1,0 +1,217 @@
+{
+  "videos": {
+    "vid_sample_cctv": {
+      "id": "vid_sample_cctv",
+      "fileName": "CCTV_Main_Entrance_CAM04.mp4",
+      "fileUrl": "/uploads/cctv_entrance_cam04.mp4",
+      "fileSize": 4718640,
+      "mimeType": "video/mp4",
+      "duration": 120,
+      "width": 1280,
+      "height": 720,
+      "fps": 25,
+      "uploadDate": "2026-10-30T15:22:02.182Z",
+      "status": "completed",
+      "thumbnailUrl": "",
+      "eventCount": 6,
+      "statusProgress": 100
+    }
+  },
+  "analyses": {
+    "vid_sample_cctv": {
+      "id": "analysis_vid_sample_cctv",
+      "videoId": "vid_sample_cctv",
+      "summary": "Automated intelligence analysis of CCTV_Main_Entrance_CAM04.mp4 identified 2 individuals, 1 dropped object interaction, and sudden velocity transitions. Initial pedestrian entry occurred at 00:10, followed by rapid acceleration at 00:31. Secondary entry and object deposit observed at 01:12.",
+      "mainActivities": [
+        "Pedestrian ingress and egress",
+        "Normal corridor walking progression",
+        "Abrupt gait transition to running",
+        "Object deposition near perimeter boundary"
+      ],
+      "people": [
+        {
+          "id": "Person_01",
+          "description": "Adult subject in dark jacket and denim trousers",
+          "clothing": "Dark utility jacket, blue jeans, athletic shoes",
+          "firstSeen": 10,
+          "lastSeen": 98,
+          "actions": [
+            "Entering scene",
+            "Walking",
+            "Running",
+            "Exiting scene"
+          ]
+        },
+        {
+          "id": "Person_02",
+          "description": "Secondary subject in light neutral clothing",
+          "clothing": "Beige pullover, carrying shoulder bag",
+          "firstSeen": 54,
+          "lastSeen": 79,
+          "actions": [
+            "Entering scene",
+            "Corridor observation",
+            "Stationary stand"
+          ]
+        }
+      ],
+      "objects": [
+        {
+          "name": "Handheld Accessory / Container",
+          "firstSeen": 54,
+          "lastSeen": 82,
+          "interaction": "Carried until 01:12, where it was released onto the surface."
+        }
+      ],
+      "events": [
+        {
+          "id": "ev_1793373739027_1",
+          "timestamp": 10,
+          "startTime": 8,
+          "endTime": 14,
+          "category": "People",
+          "event": "Person entering the scene",
+          "description": "An individual wearing dark outerwear enters the monitored area from the primary perimeter walkway.",
+          "confidence": 0.96,
+          "severity": "Low"
+        },
+        {
+          "id": "ev_1793373739027_2",
+          "timestamp": 18,
+          "startTime": 16,
+          "endTime": 26,
+          "category": "Movement",
+          "event": "Subject walking along pathway",
+          "description": "Subject continues steady linear movement along the corridor pathway with moderate pace.",
+          "confidence": 0.94,
+          "severity": "Low"
+        },
+        {
+          "id": "ev_1793373739027_3",
+          "timestamp": 31,
+          "startTime": 31,
+          "endTime": 42,
+          "category": "Movement",
+          "event": "Sudden acceleration / Running motion",
+          "description": "The person changes gait from walking to rapid running towards the north corridor.",
+          "confidence": 0.93,
+          "severity": "Medium"
+        },
+        {
+          "id": "ev_1793373739027_4",
+          "timestamp": 54,
+          "startTime": 52,
+          "endTime": 60,
+          "category": "People",
+          "event": "Secondary individual enters field of view",
+          "description": "A second person enters from the peripheral access corridor carrying an accessory bag.",
+          "confidence": 0.91,
+          "severity": "Low"
+        },
+        {
+          "id": "ev_1793373739027_5",
+          "timestamp": 72,
+          "startTime": 71,
+          "endTime": 77,
+          "category": "Objects",
+          "event": "Object released / dropped",
+          "description": "An object is separated and dropped onto the surface adjacent to the perimeter barrier.",
+          "confidence": 0.89,
+          "severity": "High"
+        },
+        {
+          "id": "ev_1793373739027_6",
+          "timestamp": 98,
+          "startTime": 96,
+          "endTime": 104,
+          "category": "People",
+          "event": "Subject departs monitored scene",
+          "description": "Primary subject exits through the designated boundary exit point.",
+          "confidence": 0.95,
+          "severity": "Low"
+        }
+      ],
+      "sceneChanges": [
+        {
+          "timestamp": 0,
+          "description": "Surveillance camera baseline view active with stable ambient illumination."
+        },
+        {
+          "timestamp": 31,
+          "description": "Rapid optical flow change detected due to fast subject motion."
+        }
+      ],
+      "keyObservations": [
+        "Clear entry sequence recorded at 00:10.",
+        "Noticeable velocity change: pedestrian began running at 00:31.",
+        "Physical object interaction detected at 01:12.",
+        "No physical confrontations or structural damage identified."
+      ],
+      "analysisDurationMs": 10309,
+      "createdAt": "2026-10-30T15:22:19.029Z",
+      "modelUsed": "gemini-3.8-flash"
+    }
+  },
+  "chats": {
+    "vid_sample_cctv": [
+      {
+        "id": "msg_1793373763687_u",
+        "videoId": "vid_sample_cctv",
+        "sender": "user",
+        "text": "When did the person start running?",
+        "referencedTimestamps": [],
+        "timestamp": "2026-10-30T15:22:43.687Z"
+      },
+      {
+        "id": "msg_1793373863175_u",
+        "videoId": "vid_sample_cctv",
+        "sender": "user",
+        "text": "When did the person start running?",
+        "referencedTimestamps": [],
+        "timestamp": "2026-10-30T15:24:23.175Z"
+      },
+      {
+        "id": "msg_1793373871184_a",
+        "videoId": "vid_sample_cctv",
+        "sender": "assistant",
+        "text": "The person started running at approximately 00:31 (startTime: 00:31). The motion was classified as sudden acceleration towards the north section.",
+        "referencedTimestamps": [
+          31
+        ],
+        "timestamp": "2026-10-30T15:24:31.184Z"
+      }
+    ]
+  },
+  "activities": [
+    {
+      "type": "upload",
+      "message": "VISIONX Video Intelligence System initialized and ready for video ingestion.",
+      "timestamp": "2026-10-30T15:21:02.917Z",
+      "id": "act_1793373662918_35849"
+    },
+    {
+      "videoId": "vid_sample_cctv",
+      "videoName": "CCTV_Main_Entrance_CAM04.mp4",
+      "type": "upload",
+      "message": "Imported benchmark CCTV sample recording for video intelligence testing.",
+      "timestamp": "2026-10-30T15:22:02.183Z",
+      "id": "act_1793373722183_zcd1n"
+    },
+    {
+      "videoId": "vid_sample_cctv",
+      "videoName": "CCTV_Main_Entrance_CAM04.mp4",
+      "type": "analysis_started",
+      "message": "Started Gemini AI video understanding and event indexing for \"CCTV_Main_Entrance_CAM04.mp4\"",
+      "timestamp": "2026-10-30T15:22:08.718Z",
+      "id": "act_1793373728718_ghumo"
+    },
+    {
+      "videoId": "vid_sample_cctv",
+      "videoName": "CCTV_Main_Entrance_CAM04.mp4",
+      "type": "analysis_completed",
+      "message": "Completed analysis for \"CCTV_Main_Entrance_CAM04.mp4\": extracted 6 events, summary, and entities.",
+      "timestamp": "2026-10-30T15:22:19.029Z",
+      "id": "act_1793373739029_k4x6n"
+    }
+  ]
+}
